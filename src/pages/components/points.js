@@ -23,6 +23,8 @@ function Points(props) {
 
     const getRadius = (selectedStation, station) => 
         selectedStation === station ? 10 : 5;
+    
+    if (data){
 
     return (
         <g>
@@ -45,7 +47,11 @@ function Points(props) {
                 />
             ))}
         </g>
-    );
+        );
+        
+    }else{
+        return <g></g>
+    }
 }
 
 export default Points;
